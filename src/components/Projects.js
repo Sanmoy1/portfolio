@@ -47,7 +47,7 @@ const Projects = () => {
               <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
               <p className="text-gray-600 mb-2">{project.date}</p>
               <p className="text-blue-600 mb-4">{project.tech}</p>
-              <ul className="list-disc list-inside text-gray-700">
+              <ul className="list-disc pl-5 text-gray-700 text-left">
                 {project.points.map((point, idx) => (
                   <li key={idx} className="mb-2">{point}</li>
                 ))}
