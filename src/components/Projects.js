@@ -38,16 +38,18 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gray-100">
+    <section id="projects" className="py-20 dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Projects</h2>
+        <h2 className="text-4xl font-bold mb-12 text-center dark:text-white">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+            <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
               <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
-              <p className="text-gray-600 mb-2">{project.date}</p>
-              <p className="text-blue-600 mb-4">{project.tech}</p>
-              <ul className="list-disc pl-5 text-gray-700 text-left">
+              <div className="mb-4">
+                <p className="text-gray-600 dark:text-gray-300">{project.date}</p>
+                <p className="text-blue-600 dark:text-blue-400">{project.tech}</p>
+              </div>
+              <ul className="list-disc pl-0 ml-4 text-left space-y-2 text-gray-700 dark:text-gray-300">
                 {project.points.map((point, idx) => (
                   <li key={idx} className="mb-2">{point}</li>
                 ))}

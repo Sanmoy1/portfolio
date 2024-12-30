@@ -33,28 +33,28 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 bg-gray-100">
+    <section id="education" className="py-20 bg-gray-100 dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Education</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 dark:text-white">Education</h2>
         
         <div className="max-w-3xl mx-auto">
           {education.map((edu, index) => (
-            <div key={index} className="mb-8 bg-white rounded-lg p-6 shadow-md">
-              <h3 className="text-2xl font-bold">{edu.school}</h3>
-              <p className="text-xl text-gray-700">{edu.degree}</p>
-              <p className="text-gray-600">{edu.date}</p>
-              {edu.location && <p className="text-gray-600">{edu.location}</p>}
-              <p className="text-blue-600 font-semibold">{edu.grade}</p>
+            <div key={index} className="mb-8 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+              <h3 className="text-2xl font-bold dark:text-white">{edu.school}</h3>
+              <p className="text-xl text-gray-700 dark:text-gray-300">{edu.degree}</p>
+              <p className="text-gray-600 dark:text-gray-300">{edu.date}</p>
+              {edu.location && <p className="text-gray-600 dark:text-gray-300">{edu.location}</p>}
+              <p className="text-blue-600 dark:text-blue-400 font-semibold">{edu.grade}</p>
             </div>
           ))}
 
           <div className="mt-12">
-            <h3 className="text-3xl font-bold mb-6">Certifications</h3>
-            <div className="bg-white rounded-lg p-6 shadow-md">
+            <h3 className="text-3xl font-bold mb-6 dark:text-white">Certifications</h3>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
               <ul className="space-y-2">
                 {certifications.map((cert, index) => (
                   <li key={index} className="flex items-center">
-                    <span className="text-blue-500 mr-2">•</span>
+                    <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
                     {cert}
                   </li>
                 ))}

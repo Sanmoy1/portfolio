@@ -7,20 +7,23 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
+import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <main>
-        <Hero />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Education />
-        <Contact />
-      </main>
-    </div>
+    <ThemeProvider>
+      <div className={`App min-h-screen transition-colors duration-300`}>
+        <Header />
+        <main className="dark:bg-gray-900 dark:text-white">
+          <Hero />
+          <Experience />
+          <Projects />
+          <Skills />
+          <Education />
+          <Contact />
+        </main>
+      </div>
+    </ThemeProvider>
   );
 }
 

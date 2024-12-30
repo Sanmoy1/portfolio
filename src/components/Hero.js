@@ -3,50 +3,59 @@ import profileImage from '../assets/image.jpeg'; // Adjust the path and filename
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center bg-gray-100 pt-16">
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-          {/* Left content */}
-          <div className="text-left md:pr-8">
-            <h1 className="text-5xl font-bold mb-4">Sanmoy Roy</h1>
-            <h2 className="text-3xl text-gray-700 mb-6">Software Developer</h2>
-            <div className="flex space-x-4 mb-8">
-              <a href="https://www.linkedin.com/in/sanmoy-roy-a55887222/" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition duration-300">
-                LinkedIn
-              </a>
-              <a href="https://github.com/Sanmoy1" 
-                 target="_blank" 
-                 rel="noopener noreferrer"
-                 className="bg-gray-800 text-white px-6 py-2 rounded-full hover:bg-gray-900 transition duration-300">
-                GitHub
-              </a>
-            </div>
-            <div className="text-gray-600 space-y-2">
-              <div className="flex items-center">
-                <span className="mr-2">📧</span>
-                <a href="mailto:emailofsanmoyroy@gmail.com" className="hover:text-blue-600 transition duration-300">
-                  emailofsanmoyroy@gmail.com
+    <section id="home" className="min-h-screen pt-20 dark:bg-gray-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="flex flex-col md:flex-row items-start justify-between gap-8">
+          <div className="md:w-2/5 text-left">
+            <div>
+              <h1 className="text-5xl font-bold mb-4 dark:text-white">Sanmoy Roy</h1>
+              <h2 className="text-3xl mb-6 text-gray-600 dark:text-gray-300">Software Developer</h2>
+              <div className="flex gap-4 mb-8">
+                <a 
+                  href="https://www.linkedin.com/in/sanmoy-roy-a55887222/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors"
+                >
+                  LinkedIn
+                </a>
+                <a 
+                  href="https://github.com/Sanmoy1" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="px-6 py-2 bg-gray-800 text-white rounded-full hover:bg-gray-900 transition-colors"
+                >
+                  GitHub
                 </a>
               </div>
-              <div className="flex items-center">
-                <span className="mr-2">📱</span>
-                <a href="tel:+919874169948" className="hover:text-blue-600 transition duration-300">
-                  +919874169948
-                </a>
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <span className="text-gray-600 dark:text-gray-300">📧</span>
+                  <a 
+                    href="mailto:emailofsanmoyroy@gmail.com" 
+                    className="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors"
+                  >
+                    emailofsanmoyroy@gmail.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-gray-600 dark:text-gray-300">📱</span>
+                  <a 
+                    href="tel:+919874169948" 
+                    className="text-gray-700 dark:text-gray-300 hover:text-blue-600 transition-colors"
+                  >
+                    +919874169948
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-
-          {/* Right image */}
-          <div className="flex justify-center md:justify-end">
-            <div className="relative w-72 h-72 md:w-96 md:h-96">
+          <div className="md:w-1/2 flex justify-center md:justify-end">
+            <div className="w-64 h-64 md:w-[400px] md:h-[400px] relative">
               <img 
                 src={profileImage} 
                 alt="Sanmoy Roy"
-                className="w-full h-full object-cover rounded-2xl shadow-2xl"
+                className="rounded-2xl shadow-lg object-cover w-full h-full"
               />
             </div>
           </div>
