@@ -1,5 +1,4 @@
 import React from 'react';
-import StaggeredItem from './StaggeredItem';
 import AnimatedSection from './AnimatedSection';
 
 const Projects = () => {
@@ -45,10 +44,9 @@ const Projects = () => {
         <h2 className="text-4xl font-bold mb-12 text-center dark:text-white">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <StaggeredItem 
-              key={index} 
-              index={index}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+            <div 
+              key={index}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transform transition-all duration-300 hover:scale-105 cursor-pointer"
             >
               <h3 className="text-2xl font-bold mb-2 dark:text-white">{project.title}</h3>
               <div className="mb-4">
@@ -60,7 +58,7 @@ const Projects = () => {
                   <li key={idx} className="mb-2">{point}</li>
                 ))}
               </ul>
-            </StaggeredItem>
+            </div>
           ))}
         </div>
       </AnimatedSection>
