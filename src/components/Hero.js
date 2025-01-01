@@ -1,12 +1,13 @@
 import React from 'react';
-import profileImage from '../assets/image.jpeg'; // Adjust the path and filename according to your image
+import profileImage from '../assets/image.jpeg'; 
+import SlideSection from './SlideSection';
 
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen pt-20 dark:bg-gray-900">
       <div className="container mx-auto px-4 py-16">
         <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8">
-          <div className="md:w-2/5 text-left">
+          <SlideSection direction="left" className="md:w-2/5 text-left">
             <div>
               <h1 className="text-5xl font-bold mb-4 dark:text-white">Sanmoy Roy</h1>
               <h2 className="text-3xl mb-6 text-gray-600 dark:text-gray-300">Software Developer</h2>
@@ -49,16 +50,17 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="md:w-1/2 flex justify-center md:justify-end">
-            <div className="w-64 h-64 md:w-[400px] md:h-[400px] relative">
-              <img 
-                src={profileImage} 
+          </SlideSection>
+          
+          <SlideSection direction="right" className="md:w-1/2">
+            <div className="relative">
+              <img
+                src={profileImage}
                 alt="Sanmoy Roy"
-                className="rounded-2xl shadow-lg object-cover w-full h-full"
+                className="rounded-lg shadow-xl w-full max-w-md mx-auto"
               />
             </div>
-          </div>
+          </SlideSection>
         </div>
       </div>
     </section>

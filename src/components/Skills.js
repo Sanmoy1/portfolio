@@ -1,4 +1,6 @@
 import React from 'react';
+import StaggeredItem from './StaggeredItem';
+import AnimatedSection from './AnimatedSection';
 
 const Skills = () => {
   const skillCategories = [
@@ -22,26 +24,33 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-20 dark:bg-gray-900">
-      <div className="container mx-auto px-4">
+      <AnimatedSection className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center dark:text-white">Skills</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {skillCategories.map((category, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6">
+            <StaggeredItem 
+              key={index} 
+              index={index}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300"
+            >
               <h3 className="text-xl font-semibold mb-4 dark:text-white">{category.title}</h3>
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, skillIndex) => (
-                  <span
+                  <StaggeredItem
                     key={skillIndex}
-                    className="px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm"
+                    index={index * 4 + skillIndex} // Stagger skills within each category
+                    className="transform transition-all"
                   >
-                    {skill}
-                  </span>
+                    <span className="inline-block px-4 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm hover:scale-105 transition-transform duration-200">
+                      {skill}
+                    </span>
+                  </StaggeredItem>
                 ))}
               </div>
-            </div>
+            </StaggeredItem>
           ))}
         </div>
-      </div>
+      </AnimatedSection>
     </section>
   );
 };
