@@ -4,6 +4,7 @@ const StaggeredItem = ({ children, index = 0, className = '' }) => {
   const itemRef = useRef(null);
 
   useEffect(() => {
+    const currentRef = itemRef.current; // Store ref value
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -17,13 +18,13 @@ const StaggeredItem = ({ children, index = 0, className = '' }) => {
       }
     );
 
-    if (itemRef.current) {
-      observer.observe(itemRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (itemRef.current) {
-        observer.unobserve(itemRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [index]);

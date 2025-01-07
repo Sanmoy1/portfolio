@@ -4,6 +4,7 @@ const AnimatedSection = ({ children, className = '' }) => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    const currentRef = sectionRef.current; // Store ref value
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -16,13 +17,13 @@ const AnimatedSection = ({ children, className = '' }) => {
       }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
