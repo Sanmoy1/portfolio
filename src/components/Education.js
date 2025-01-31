@@ -13,13 +13,13 @@ const Education = () => {
       school: "St. Augustine's Day School",
       degree: "Class 12",
       date: "May 2017 – Mar 2019",
-      grade: "77.66%"
+      // grade: "77.66%"
     },
     {
       school: "St. Augustine's Day School",
       degree: "Class 10",
       date: "April 2007 – Mar 2017",
-      grade: "74.83%"
+      // grade: "74.83%"
     }
   ];
 
