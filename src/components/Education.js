@@ -33,13 +33,13 @@ const Education = () => {
   ];
 
   return (
-    <section id="education" className="py-20 bg-gray-100 dark:bg-gray-900">
+    <section id="education" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12 dark:text-white">Education</h2>
         
         <div className="max-w-3xl mx-auto">
           {education.map((edu, index) => (
-            <div key={index} className="mb-8 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+            <div key={index} className="mb-8 bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-black hover:scale-105 duration-300">
               <h3 className="text-2xl font-bold dark:text-white">{edu.school}</h3>
               <p className="text-xl text-gray-700 dark:text-gray-300">{edu.degree}</p>
               <p className="text-gray-600 dark:text-gray-300">{edu.date}</p>
@@ -50,7 +50,7 @@ const Education = () => {
 
           <div className="mt-12">
             <h3 className="text-3xl font-bold mb-6 dark:text-white">Certifications</h3>
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md">
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-black hover:scale-105 duration-300">
               <ul className="space-y-2 text-left">
                 {certifications.map((cert, index) => (
                   <li key={index} className="flex items-center">

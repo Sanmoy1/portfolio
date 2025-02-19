@@ -26,12 +26,12 @@ const Skills = () => {
     <section id="skills" className="py-20 dark:bg-gray-900">
       <AnimatedSection className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center dark:text-white">Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
           {skillCategories.map((category, index) => (
             <StaggeredItem 
               key={index} 
               index={index}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300"
+              className="border border-black dark:border-white bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300"
             >
               <h3 className="text-xl font-semibold mb-4 dark:text-white">{category.title}</h3>
               <div className="flex flex-wrap gap-3">

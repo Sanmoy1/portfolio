@@ -39,6 +39,7 @@ const Projects = () => {
     {
       title: "SentimentScope",
       date: "Jan 2024 – Mar 2024",
+      github:"https://github.com/Sanmoy1/SentimentScope",
       tech: "Python, Kotlin, Android Studio",
       points: [
         "Implemented a real-time stock market sentiment analysis mobile application",
@@ -50,6 +51,7 @@ const Projects = () => {
     {
       title: "Art Institute App",
       date: "Aug 2024 – Oct 2024",
+      github:"https://github.com/Sanmoy1/Art-Institute-App",
       tech: "Java, Android Volley, Picasso",
       points: [
         "Created an interactive mobile application showcasing 300,000+ artworks",
@@ -61,6 +63,7 @@ const Projects = () => {
     {
       title: "QuickRead",
       date: "Nov 2024 – Present",
+      github:"https://github.com/Sanmoy1/QuickRead",
       tech: "Flutter, Dart, Provider, News API, Firebase",
       points: [
         "Developed a news application with headlines, advanced filters, and text-to-speech functionality",
@@ -72,6 +75,7 @@ const Projects = () => {
     {
       "title": "MusicStream",
       "date": "Dec 2024 – Present",
+      "github":"https://github.com/Sanmoy1/streaming-platform",
       "tech": "React, Tailwind CSS, Framer Motion, React Router DOM, HTML5 Audio API",
       "points": [
         "Identified the need for a modern, responsive music streaming platform with advanced features.",
@@ -94,11 +98,11 @@ const Projects = () => {
             {projects.map((project, index) => (
               <div 
                 key={index}
-                className="flex-shrink-0 w-96 mr-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 transform transition-all duration-300 hover:scale-105 cursor-pointer"
+                className="flex-shrink-0 w-96 mr-8 bg-white dark:bg-gray-800 border border-black rounded-lg shadow-lg p-6 transform transition-all duration-300 hover:scale-105 cursor-pointer"
               >
                 <h3 className="text-2xl font-bold mb-2 dark:text-white">{project.title}</h3>
                 <div className="mb-4">
-                  <p className="text-gray-600 dark:text-gray-300">{project.date}</p>
+                  <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-gray-300 hover:underline">GitHub</a>
                   <p className="text-blue-600 dark:text-blue-400">{project.tech}</p>
                 </div>
                 <ul className="list-disc pl-0 ml-4 text-left space-y-2 text-gray-700 dark:text-gray-300">

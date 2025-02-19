@@ -6,7 +6,7 @@ const Experience = () => {
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold mb-12 text-center dark:text-white">Experience</h2>
         <div className="max-w-3xl mx-auto">
-          <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-8 transform transition-all duration-300 hover:scale-105 cursor-pointer">
+          <div className="bg-white border border-black dark:bg-gray-800 rounded-lg shadow-lg p-8 mb-8 transform transition-all duration-300 hover:scale-105 cursor-pointer">
             <div className="flex flex-col md:flex-row justify-between mb-4">
               <h3 className="text-2xl font-bold dark:text-white">Trimplin</h3>
               <p className="text-gray-600 dark:text-gray-300">Feb 2023 – Present | Kolkata, West Bengal</p>

@@ -7,9 +7,10 @@ const Contact = () => {
         <h2 className="text-4xl font-bold mb-12 text-center dark:text-white">Contact Me</h2>
         <div className="max-w-2xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
             <a 
               href="mailto:emailofsanmoyroy@gmail.com"
-              className="flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              className="flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-black"
             >
               <div className="text-center">
                 <div className="text-3xl mb-2">📧</div>
@@ -20,7 +21,7 @@ const Contact = () => {
 
             <a 
               href="tel:+919874169948"
-              className="flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              className="flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-black"
             >
               <div className="text-center">
                 <div className="text-3xl mb-2">📱</div>
@@ -33,7 +34,7 @@ const Contact = () => {
               href="https://www.linkedin.com/in/sanmoy-roy-a55887222/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              className="flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-black"
             >
               <div className="text-center">
                 <div className="text-3xl mb-2">💼</div>
@@ -46,7 +47,7 @@ const Contact = () => {
               href="https://github.com/Sanmoy1"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              className="flex items-center justify-center p-6 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-black"
             >
               <div className="text-center">
                 <div className="text-3xl mb-2">💻</div>
