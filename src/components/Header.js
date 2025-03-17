@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`${isDarkMode ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'} py-4 fixed w-full top-0 z-50 transition-colors duration-300 shadow-md`}>
+    <header className={`${isDarkMode ? 'backdrop-blur-xl text-white text-bold' : 'backdrop-blur-xl text-gray-900 text-bold'} py-4 fixed w-full top-0 z-50 transition-colors duration-300 shadow-md`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <h1 className="text-2xl font-bold">Sanmoy Roy</h1>
